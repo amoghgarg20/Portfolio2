@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amoghgarg.com/portfolio/sitemap.xml
