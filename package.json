@@ -1,0 +1,11 @@
+{
+  "name": "portfolio2-tests",
+  "version": "1.0.0",
+  "description": "Playwright screenshot tests for amoghgarg.com landing page",
+  "scripts": {
+    "test": "node tests/landing-page.spec.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.41.0"
+  }
+}
