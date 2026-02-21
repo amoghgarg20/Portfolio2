@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta Tags -->
+  <title>Amogh Garg | Software Engineer at Microsoft</title>
+  <meta name="description" content="Portfolio of Amogh Garg — Software Engineer at Microsoft working on Intune. B.Tech CSE from NSUT. Skilled in C#, .NET, Python, Azure, and more." />
+  <meta name="keywords" content="Amogh Garg, Software Engineer, Microsoft, Intune, C#, .NET, Python, Azure, Portfolio, NSUT" />
+  <meta name="author" content="Amogh Garg" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://amoghgarg.com/portfolio" />
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://amoghgarg.com/portfolio" />
+  <meta property="og:title" content="Amogh Garg | Software Engineer at Microsoft" />
+  <meta property="og:description" content="Portfolio of Amogh Garg — Software Engineer at Microsoft. Passionate about AI, Security, and building robust software systems." />
+  <meta property="og:image" content="https://amoghgarg.com/portfolio/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@amoghgarg9" />
+  <meta name="twitter:title" content="Amogh Garg | Software Engineer at Microsoft" />
+  <meta name="twitter:description" content="Portfolio of Amogh Garg — Software Engineer at Microsoft. Passionate about AI, Security, and building robust software systems." />
+  <meta name="twitter:image" content="https://amoghgarg.com/portfolio/og-image.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons (Font Awesome CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="#hero" class="nav-logo">Amogh<span>.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="theme-icon sun" aria-hidden="true">☀️</span>
+          <span class="theme-icon moon" aria-hidden="true">🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Available for interesting opportunities
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient">Amogh Garg</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          <i class="fa-brands fa-microsoft" aria-hidden="true"></i>&nbsp;
+          Software Engineer at Microsoft · Bengaluru, India
+        </p>
+
+        <p class="hero-desc">
+          I build robust, secure, and scalable software systems. Currently working on
+          <strong>Intune</strong> at Microsoft, focusing on microservice architecture
+          and persistent databases. Passionate about AI and Software Security.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fa fa-envelope" aria-hidden="true"></i> Get in Touch
+          </a>
+          <a href="#projects" class="btn btn-outline">
+            <i class="fa fa-code" aria-hidden="true"></i> View Projects
+          </a>
+        </div>
+
+        <div class="hero-social" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/amogh-garg/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/amoghgarg20" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://twitter.com/amoghgarg9" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter / X">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://medium.com/@amoghgarg9" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Medium">
+            <i class="fa-brands fa-medium" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">A quick intro to who I am and what I do</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-avatar-wrap">
+          <div class="about-avatar" aria-hidden="true">👨‍💻</div>
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-value">3+</div>
+              <div class="stat-label">Microsoft<br>Engagements</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">8.84</div>
+              <div class="stat-label">CGPA<br>(NSUT)</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">4+</div>
+              <div class="stat-label">Projects<br>Built</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <p>
+            As a <strong>Software Engineer at Microsoft</strong>, my current tech stack includes working
+            with <strong>C# and .NET</strong>. I hold a B.Tech in Computer Science and Engineering from
+            <strong>Netaji Subhas University of Technology</strong> (formerly NSIT), and have a strong
+            foundation in C++ and Python, with proficiency in data structures, algorithms, and
+            System Design.
+          </p>
+          <p>
+            Passionate about exploring new technologies, I am particularly interested in
+            <strong>AI</strong> and <strong>Security of Software Systems</strong>, and continuously
+            strive to stay up-to-date with the latest advancements.
+          </p>
+          <p>
+            Eager to contribute to the industry, I seek opportunities for further growth and learning
+            as a software engineer. Outside of work, I enjoy cricket, swimming, and writing technical
+            articles on Medium.
+          </p>
+
+          <div class="about-interests">
+            <span class="tag">🤖 Artificial Intelligence</span>
+            <span class="tag">🔒 Software Security</span>
+            <span class="tag">☁️ Cloud Computing</span>
+            <span class="tag">📊 Data Engineering</span>
+            <span class="tag">⚙️ System Design</span>
+            <span class="tag">🏏 Cricket</span>
+            <span class="tag">🏊 Swimming</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXPERIENCE ==================== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-subtitle">My professional journey and roles</p>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Microsoft SWE -->
+        <div class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <article class="exp-card">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Software Engineer</div>
+                <div class="exp-company">
+                  <i class="fa-brands fa-microsoft" aria-hidden="true"></i>
+                  Microsoft India (R&amp;D) Pvt. Ltd.
+                </div>
+                <div class="exp-location">
+                  <i class="fa fa-location-dot" aria-hidden="true"></i> Bengaluru, India
+                </div>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-period">Jul 2024 – Present</span>
+              </div>
+            </div>
+            <p class="exp-desc">
+              Contributing to the development and enhancement of <strong>Intune</strong>, a
+              cloud-based endpoint management product by migrating the existing system to a more
+              robust architecture, with a focus on persistent databases and microservice architecture,
+              ensuring enhanced reliability, security, and performance. Worked extensively with
+              C#, .NET, and CosmosDB, leveraging deep expertise in persistent databases. Applied
+              in-depth knowledge of security best practices throughout the software lifecycle,
+              ensuring that all systems are designed, developed, and deployed with robust security
+              measures.
+            </p>
+            <div class="exp-skills">
+              <span class="tag">C#</span>
+              <span class="tag">.NET</span>
+              <span class="tag">CosmosDB</span>
+              <span class="tag">Microservices</span>
+              <span class="tag">Persistent Databases</span>
+              <span class="tag">CI/CD</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Microsoft Intern -->
+        <div class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <article class="exp-card">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">SWE Intern</div>
+                <div class="exp-company">
+                  <i class="fa-brands fa-microsoft" aria-hidden="true"></i>
+                  Microsoft India (R&amp;D) Pvt. Ltd.
+                </div>
+                <div class="exp-location">
+                  <i class="fa fa-location-dot" aria-hidden="true"></i> Noida, India
+                </div>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-period">May 2023 – Jul 2023</span>
+              </div>
+            </div>
+            <p class="exp-desc">
+              Worked with the Intune Data Infrastructure team under Security Org. Responsible for
+              a proof of concept regarding consolidation of multiple routes and target data sources
+              in the Intune reporting pipeline. Worked on Python and Microsoft Azure services
+              including Azure Data Lake Storage, Microsoft Purview, Azure Synapse Analytics, Delta
+              Parquet format, dedicated SQL pools, Spark pools, Azure Data Factory, and ETL Pipelines.
+            </p>
+            <div class="exp-skills">
+              <span class="tag">Python</span>
+              <span class="tag">Azure Data Lake</span>
+              <span class="tag">Synapse Analytics</span>
+              <span class="tag">Spark</span>
+              <span class="tag">ETL Pipelines</span>
+              <span class="tag">Big Data</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Microsoft Engage -->
+        <div class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <article class="exp-card">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Mentee – Microsoft Engage Program</div>
+                <div class="exp-company">
+                  <i class="fa-brands fa-microsoft" aria-hidden="true"></i>
+                  Microsoft India (R&amp;D) Pvt. Ltd.
+                </div>
+                <div class="exp-location">
+                  <i class="fa fa-location-dot" aria-hidden="true"></i> Remote
+                </div>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-period">May 2022 – Jun 2022</span>
+              </div>
+            </div>
+            <p class="exp-desc">
+              Under the mentorship of senior developers, built a browser-based application
+              demonstrating the application of <strong>Face Recognition technology</strong> for
+              secure user authentication. The project leveraged the Facenet model, Flask, and
+              MongoDB for a full-stack implementation.
+            </p>
+            <div class="exp-skills">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Facenet</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Full Stack</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- DEVCOMM ML Head -->
+        <div class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <article class="exp-card">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Machine Learning Head</div>
+                <div class="exp-company">DEVCOMM – NSUT</div>
+                <div class="exp-location">
+                  <i class="fa fa-location-dot" aria-hidden="true"></i> New Delhi, India
+                </div>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-period">2022 – 2023</span>
+              </div>
+            </div>
+            <p class="exp-desc">
+              Led a team of 10 students to develop a software to generate summaries of webinars.
+              Mentored juniors on ML projects, conducted sessions on ML basics, and hosted technical
+              fests, events, and competitions related to Data Science and ML.
+            </p>
+            <div class="exp-skills">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Team Leadership</span>
+              <span class="tag">Mentorship</span>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EDUCATION ==================== -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">Academic background and credentials</p>
+      </div>
+
+      <div class="education-grid">
+
+        <div class="edu-card">
+          <div class="edu-icon" aria-hidden="true">🎓</div>
+          <div class="edu-degree">B.Tech in Computer Science &amp; Engineering</div>
+          <div class="edu-uni">Netaji Subhas University of Technology (NSUT), New Delhi</div>
+          <div class="edu-meta">
+            <span class="edu-year">🗓 Class of 2024</span>
+            <span class="edu-marks">CGPA 8.84 / 10</span>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-icon" aria-hidden="true">📚</div>
+          <div class="edu-degree">Class XII – CBSE</div>
+          <div class="edu-uni">Amity International School, Mayur Vihar</div>
+          <div class="edu-meta">
+            <span class="edu-year">🗓 2020</span>
+            <span class="edu-marks">96.2%</span>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-icon" aria-hidden="true">📖</div>
+          <div class="edu-degree">Class X – CBSE</div>
+          <div class="edu-uni">Amity International School, Mayur Vihar</div>
+          <div class="edu-meta">
+            <span class="edu-year">🗓 2018</span>
+            <span class="edu-marks">96.8%</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS ==================== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+      </div>
+
+      <div class="skills-grid">
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>C#</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>.NET</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>CosmosDB</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>Python</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>C++</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>Microsoft Azure</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>HTML</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>CSS</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>ReactJS</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>SQL</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>Git</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>AWS</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>Data Structures &amp; Algorithms</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>System Design</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>Machine Learning</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>ETL Pipelines</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>Microservice Architecture</span>
+        <span class="skill-tag"><span class="skill-dot" aria-hidden="true"></span>CI/CD</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS ==================== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">A selection of things I've built</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- VidSum -->
+        <article class="project-card">
+          <div class="project-img" aria-hidden="true">🎥</div>
+          <div class="project-body">
+            <h3 class="project-name">VidSum</h3>
+            <p class="project-desc">
+              NLP system in the form of a browser extension that automatically records online
+              meetings, webinars, and videos and generates a text summary of the content.
+            </p>
+            <div class="project-footer">
+              <a href="https://github.com/amoghgarg20/Summary-Generator" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> View Repo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Smart Login System -->
+        <article class="project-card">
+          <div class="project-img" aria-hidden="true">🔐</div>
+          <div class="project-body">
+            <h3 class="project-name">Smart Login System</h3>
+            <p class="project-desc">
+              A face-recognition login system that integrates with web applications, eliminating
+              the need to remember usernames and passwords through biometric authentication.
+            </p>
+            <div class="project-footer">
+              <a href="https://github.com/amoghgarg20/Login-System" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> View Repo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- IOT Project -->
+        <article class="project-card">
+          <div class="project-img" aria-hidden="true">💧</div>
+          <div class="project-body">
+            <h3 class="project-name">IOT Hydration Monitor</h3>
+            <p class="project-desc">
+              A smart IoT system that measures the hydration level of the user in real time.
+              Research paper publication in progress.
+            </p>
+            <div class="project-footer">
+              <span class="project-link" style="cursor:default;opacity:0.6;">
+                <i class="fa fa-clock" aria-hidden="true"></i> Coming Soon
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Grantify -->
+        <article class="project-card">
+          <div class="project-img" aria-hidden="true">🔬</div>
+          <div class="project-body">
+            <h3 class="project-name">Grantify</h3>
+            <p class="project-desc">
+              An integrated online platform for researchers providing information and relevant
+              details about national and international research grants. Developed for the Grand
+              Finale of Smart India Hackathon 2022 (SIH'22).
+            </p>
+            <div class="project-footer">
+              <a href="https://github.com/amoghgarg20/AAVSAM" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> View Repo
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Have a question or want to work together?</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div>
+          <ul class="contact-info-list" aria-label="Contact information">
+            <li class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">📧</div>
+              <div>
+                <div class="contact-info-label">Email</div>
+                <a href="mailto:amoghgarg9@gmail.com" class="contact-info-value">amoghgarg9@gmail.com</a>
+              </div>
+            </li>
+            <li class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">📱</div>
+              <div>
+                <div class="contact-info-label">Phone</div>
+                <a href="tel:+918130463841" class="contact-info-value">+(91) 8130463841</a>
+              </div>
+            </li>
+            <li class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">📍</div>
+              <div>
+                <div class="contact-info-label">Location</div>
+                <div class="contact-info-value">Bengaluru, India</div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="contact-social" aria-label="Social profiles">
+            <a href="https://www.linkedin.com/in/amogh-garg/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/amoghgarg20" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/amoghgarg9" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://medium.com/@amoghgarg9" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Medium">
+              <i class="fa-brands fa-medium" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/amoghgarg20/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project or just say hi!" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <i class="fa fa-paper-plane" aria-hidden="true" style="margin-right:0.4rem;"></i>Send Message
+          </button>
+          <div class="form-message" id="formMessage" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Amogh<span>.</span></div>
+        <p class="footer-text">
+          Designed &amp; built by Amogh Garg &middot;
+          <a href="mailto:amoghgarg9@gmail.com">amoghgarg9@gmail.com</a>
+        </p>
+        <p class="footer-text">© <span id="year"></span> Amogh Garg. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
