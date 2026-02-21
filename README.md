@@ -1,7 +1,7 @@
 # Amogh Garg — Portfolio
 
 Personal portfolio website for **Amogh Garg**, Software Engineer at Microsoft.  
-Live at: [amoghgarg.com/portfolio](https://amoghgarg.com/portfolio)
+Landing page: [amoghgarg.com](https://amoghgarg.com) · Portfolio: [amoghgarg.com/portfolio](https://amoghgarg.com/portfolio)
 
 ---
 
@@ -9,20 +9,34 @@ Live at: [amoghgarg.com/portfolio](https://amoghgarg.com/portfolio)
 
 ```
 Portfolio2/
-├── portfolio/              # All website source files
+├── index.html              # Root landing page (amoghgarg.com)
+├── portfolio/              # Portfolio source files (amoghgarg.com/portfolio)
 │   ├── index.html          # Main HTML page (all sections in one file)
 │   ├── styles.css          # Global stylesheet (light/dark themes, responsive)
 │   └── script.js           # Interactivity: theme toggle, scroll animations, contact form
+├── tests/
+│   └── landing-page.spec.js  # Playwright screenshot tests for the landing page
 ├── screenshots/            # Local test screenshots (see below)
+├── package.json            # Dev dependencies (Playwright)
 ├── robots.txt              # SEO crawler directives
 └── README.md
 ```
 
 ## Running Locally
 
-The site is a plain static website — no build step or dependencies required.
+The site is a plain static website — no build step or dependencies required for local development.
 
 ### Option 1 — Python (built-in, recommended)
+
+#### Landing page (root)
+
+```bash
+python3 -m http.server 8080
+```
+
+Open [http://localhost:8080/](http://localhost:8080/) for the landing page.
+
+#### Portfolio
 
 ```bash
 # Serve from the portfolio/ subdirectory so all relative paths resolve correctly
@@ -57,7 +71,7 @@ Then open the URL printed in the terminal (usually [http://localhost:3000](http:
 
 1. Go to your repository on GitHub → **Settings** → **Pages**.
 2. Under **Source**, choose **GitHub Actions**.
-3. The workflow at `.github/workflows/deploy.yml` (already committed) will publish the `portfolio/` folder automatically on every push to `main`.
+3. The workflow at `.github/workflows/deploy.yml` (already committed) will build a `_site/` staging directory containing the root `index.html` and the `portfolio/` subdirectory, then publish it automatically on every push to `main`.
 
 ### 2 — Set the custom domain in GitHub
 
@@ -90,13 +104,24 @@ After DNS propagates (usually < 1 hour, up to 48 h):
 dig amoghgarg.com +noall +answer     # should show the four GitHub IPs
 ```
 
-Then open `https://amoghgarg.com` — the portfolio will be live. 🎉
+Then open `https://amoghgarg.com` — the landing page and portfolio will be live. 🎉
 
 ---
 
 ## Screenshots
 
-Captured locally with Playwright against `python3 -m http.server 8080`.
+### Landing page (`amoghgarg.com`)
+
+| Preview | Viewport |
+|---------|---------|
+| ![Landing – desktop](screenshots/landing-desktop.png) | Desktop (1280×800) |
+| ![Landing – mobile](screenshots/landing-mobile.png) | Mobile (390×844) |
+
+Run `npm install && npx playwright install chromium && npm test` to regenerate these screenshots.
+
+### Portfolio (`amoghgarg.com/portfolio`)
+
+Captured locally with Playwright against `python3 -m http.server 8080 --directory portfolio`.
 
 | Preview | Section |
 |---------|---------|

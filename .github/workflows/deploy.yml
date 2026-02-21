@@ -29,11 +29,18 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload portfolio folder as Pages artifact
+      - name: Build site structure
+        run: |
+          mkdir -p _site/portfolio
+          cp index.html _site/
+          cp robots.txt _site/
+          cp CNAME _site/
+          cp -r portfolio/* _site/portfolio/
+
+      - name: Upload combined site as Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Deploy only the contents of the portfolio/ subdirectory
-          path: portfolio
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
