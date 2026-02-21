@@ -51,7 +51,7 @@ window.addEventListener('scroll', setActiveNav, { passive: true });
 const animateOnScroll = (selector, threshold = 0.15) => {
   const els = document.querySelectorAll(selector);
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         // Stagger delay based on sibling index
         const siblings = Array.from(entry.target.parentElement.children);
