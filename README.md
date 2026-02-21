@@ -51,6 +51,49 @@ Then open the URL printed in the terminal (usually [http://localhost:3000](http:
 
 ---
 
+## Deploying to GitHub Pages with a Custom Domain
+
+### 1 — Enable GitHub Pages in the repository settings
+
+1. Go to your repository on GitHub → **Settings** → **Pages**.
+2. Under **Source**, choose **GitHub Actions**.
+3. The workflow at `.github/workflows/deploy.yml` (already committed) will publish the `portfolio/` folder automatically on every push to `main`.
+
+### 2 — Set the custom domain in GitHub
+
+Still on **Settings → Pages**, enter `amoghgarg.com` in the **Custom domain** field and click **Save**.  
+GitHub will create (or confirm) the `CNAME` file already present at `portfolio/CNAME`.  
+Tick **Enforce HTTPS** once the DNS check turns green (can take up to 48 h).
+
+### 3 — Configure DNS in GoDaddy
+
+Log in to [GoDaddy Domains](https://dcc.godaddy.com) → **My Products** → **DNS** for `amoghgarg.com`.
+
+**Delete any existing A / CNAME records for `@` and `www`**, then add:
+
+| Type | Name | Value | TTL |
+|------|------|-------|-----|
+| A | `@` | `185.199.108.153` | 1 hour |
+| A | `@` | `185.199.109.153` | 1 hour |
+| A | `@` | `185.199.110.153` | 1 hour |
+| A | `@` | `185.199.111.153` | 1 hour |
+| CNAME | `www` | `amoghgarg20.github.io` | 1 hour |
+
+> These are GitHub's official Pages IP addresses.  
+> The `www` CNAME lets `www.amoghgarg.com` redirect to the apex domain automatically.
+
+### 4 — Verify
+
+After DNS propagates (usually < 1 hour, up to 48 h):
+
+```
+dig amoghgarg.com +noall +answer     # should show the four GitHub IPs
+```
+
+Then open `https://amoghgarg.com` — the portfolio will be live. 🎉
+
+---
+
 ## Screenshots
 
 Captured locally with Playwright against `python3 -m http.server 8080`.
