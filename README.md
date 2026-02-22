@@ -156,5 +156,33 @@ Captured locally with Playwright against `python3 -m http.server 8080 --director
 - 🌗 **Light / Dark theme** toggle with `localStorage` persistence
 - 📱 **Fully responsive** — mobile-first, hamburger menu on small screens
 - ✨ **Scroll animations** via `IntersectionObserver`
-- 📬 **Contact form** with simulated async send
+- 📬 **Contact form** with [Formspree](https://formspree.io/) integration (server-side delivery, spam protection)
 - ♿ ARIA labels and semantic HTML throughout
+
+---
+
+## 📬 Contact Form Setup
+
+The "Get in Touch" contact form uses [Formspree](https://formspree.io/) to deliver messages directly to your inbox — no backend server required.
+
+### Configuration
+
+1. **Create a Formspree account** at [formspree.io](https://formspree.io/)
+2. **Create a new form** and note your unique Form ID (e.g., `xAbCdEfG`)
+3. **Update the form action** in `portfolio/index.html`:
+   ```html
+   <form ... action="https://formspree.io/f/YOUR_FORM_ID" ...>
+   ```
+   Replace `YOUR_FORM_ID` with your actual Formspree Form ID.
+
+### Security Settings (Recommended)
+
+- **Domain Restriction**: In your Formspree form settings, add your domain (e.g., `amoghgarg.com`) under *Authorized Domains* to prevent submissions from unauthorized origins.
+- **reCAPTCHA**: Enable reCAPTCHA in the Formspree dashboard under *Spam Protection*.
+- **Honeypot Field**: A hidden honeypot input (`_gotcha`) is already included in the form to catch spam bots.
+
+### Notes
+
+- Formspree's free tier allows up to **50 submissions per month**.
+- No API keys or secrets are exposed in the client-side code.
+- Submissions are processed entirely server-side by Formspree.
