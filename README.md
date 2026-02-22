@@ -167,13 +167,11 @@ The "Get in Touch" contact form uses [Formspree](https://formspree.io/) to deliv
 
 ### Configuration
 
-1. **Create a Formspree account** at [formspree.io](https://formspree.io/)
-2. **Create a new form** and note your unique Form ID (e.g., `xAbCdEfG`)
-3. **Update the form action** in `portfolio/index.html`:
+The form endpoint is already configured. If you ever need to update it, replace the `action` value in `portfolio/index.html`:
    ```html
    <form ... action="https://formspree.io/f/YOUR_FORM_ID" ...>
    ```
-   Replace `YOUR_FORM_ID` with your actual Formspree Form ID.
+   Replace `YOUR_FORM_ID` with your Formspree Form ID.
 
 ### Security Settings (Recommended)
 
