@@ -70,7 +70,7 @@ animateOnScroll('.edu-card');
 animateOnScroll('.skill-tag', 0.1);
 animateOnScroll('.project-card', 0.1);
 
-// ─── Contact Form ─────────────────────────────────
+// ─── Contact Form (Formspree) ──────────────────────
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
@@ -80,15 +80,30 @@ contactForm.addEventListener('submit', (e) => {
   btn.disabled = true;
   btn.textContent = 'Sending…';
 
-  // Simulate async send (replace with real endpoint as needed)
-  setTimeout(() => {
+  fetch(contactForm.action, {
+    method: 'POST',
+    body: new FormData(contactForm),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(response => {
+    if (response.ok) {
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+      contactForm.reset();
+      formMessage.textContent = '✓ Message sent! I\'ll get back to you soon.';
+      formMessage.className = 'form-message success';
+    } else {
+      throw new Error('Form submission failed');
+    }
+    setTimeout(() => { formMessage.className = 'form-message'; }, 5000);
+  })
+  .catch(() => {
     btn.disabled = false;
     btn.textContent = 'Send Message';
-    contactForm.reset();
-    formMessage.textContent = '✓ Message sent! I\'ll get back to you soon.';
-    formMessage.className = 'form-message success';
+    formMessage.textContent = '✗ Something went wrong. Please email me directly at amoghgarg9@gmail.com';
+    formMessage.className = 'form-message error';
     setTimeout(() => { formMessage.className = 'form-message'; }, 5000);
-  }, 1200);
+  });
 });
 
 // ─── Smooth scroll offset fix ─────────────────────
